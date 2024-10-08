@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<cs50.h>
+//Test if a user's name begins with 'm' (A function with basic return output
+
+void my()
+{
+	string hi=get_string("What is your name? ");
+	printf("Hello %s \n",hi);
+}
+
+int main()
+{
+	my();
+}

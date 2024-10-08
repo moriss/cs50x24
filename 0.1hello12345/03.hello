@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<cs50.h>
+//Asks someone's name and greet them. 1.2.3. 4next
+void my();
+
+int main()
+{
+        my();
+}
+
+
+void my()
+{
+        string h=get_string("What is your name? ");
+        printf("Hello %s \n ", h);
+}
+

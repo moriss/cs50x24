@@ -1,0 +1,313 @@
+Error checker
+The easiest way to use this file is to paste actual error messages you experience and write down the fix alongside it. 
+
+September 24
+expected declaration specifiers or ‘...’ before string constant
+I place a closing curly brace the wrong way round.
+
+expected ‘)’ before ‘x’
+I forgot the comma in printf between the string and the variable.
+
+control reaches end of non-void function
+The output to my function is char (char* my()). This error occured because I did
+ not add a return before the end closing brace. Instead of having to add a retur
+n value, you can simply change your function to  void my() In this case, you fun
+ction won't return a value.
+
+
+
+Here I have noted down some common errors I make in my code. It's useful to read over it every now and then to cut down on the time in identifying and correcting 
+errors as they arise. I try to paste the error message (when i remember to) as a helpful guide (for non logical errors).
+
+
+Janurary 24
+ too many arguments for format
+int main()
+{
+	char * x = "john";
+	printf("Hello \n" , x );
+}
+//You missed out the placeholder for the datatype  %s
+
+March 23
+##############
+The incrementing 'x' here, causes the program to (wrongly) run forever. The incrementing x needs to be placed within the confines of the 'do' in this do while loop.
+int main(void)
+{
+    int x = 0;//Set 'x' to zero
+    do {
+            printf("Q ");//print this then...
+            //x ++ should be here.
+        }
+    while (x <= 2);//keep printing while 'x' is less than or equal to 2
+    x ++;// Placing the incrementing int here, causes the program to run forever.
+    //It needs to be within the confines of the 'do' in this do while loop.
+}
+
+
+
+###########
+11th May 22
+echo and variables
+
+echo "$jon[3] $jon[2] $jon[1] $jon[0]";
+Using speech marks respects one space between variables
+
+echo $jon[3] , $jon[2] , $jon[1] , $jon[0];
+Using commas instead does not.
+#########
+
+#########
+Logical Error 3rd April 22
+Using an if statement without the else.
+'return' is used to stop the program at the relevant point. Where a condition is met, the program needs to return 0(by convention). But when the conditio
+n is not met, the program returns 1(by convention). Not returning 1 and 0 at these points in the program brings up a logical error. (No output)
+
+Example:
+int main (void)
+{
+  int vex[9] = {1,3,5,7,9,13,50 ,17,19};//A statically initialised array
+  for (int i = 0; i < 9; i ++)
+  {
+    if(vex[i] == 50)
+    {
+      printf("%i found it!" , vex[i]);
+      return 0;
+    }
+  }
+  printf("Not found!\n");
+  return 1;
+}
+
+
+
+
+
+
+Logical Error.
+Here, my code is compiling but there is a logical error. 
+When using the while loop on its own, be sure to add curly breaces to the action you want to happen if the while condition is met.
+EG:
+while(this)
+{
+	do this
+}
+#####
+Within a for loop, you mistakenly used comas to separate conditions etc, instead of semi colons. This brought up and error "function redefined!" or 
+"redefinition of 'i'"
+for(int i = 0, i < j, i ++)  should  be  for(int i = 0; i < j; i ++)
+
+
+
+When working with longs in the various credit tasks,I often have a logic error where the code shows no errors but has no output (via print f) or something unusal
+happens.
+This is usually down to any of these 3 things. 
+1. Not setting your counter or addup variable to zero (if being used) (error: initialize the variable counter to silence this warning)
+2. not increminting counter by 1 at end of cycle, eg counter ++. (Usually creates a logical error, ie your code runs correctly but doesn't produce a result at 
+printf)
+3. Not dividing long by 10 to access next digit. (if you end up on an infinte loop, hit ctrl + c to kill the programe.
+
+
+int addup = 0;
+When accumulating (adding up) numbers, you need to initialise the variable ,say with zero, or it doesn't work.
+Just having int addup; instead of int addup = 0; will likely bring up a logical error. Ie it will print a wrong answer.
+
+HOWEVER, this doesn't seem to be required when setting a number into a variable such as x = card % 10;. Here, the variable only needs to be declared ie int x.
+This also works if you initialise the variable, as above. So both way work. 
+
+When accumulating different conditions of digits remember it is as below.
+
+addup = addup + (card % 10) * 2;
+and not
+addup = (card % 10) * 2; This will put the lastmost digit on its own into addup. 
+
+
+Where you write a function and call main, do not add the datatype to the function call in main or it messes things up.
+error: a parameter list without types is only allowed in a function definition
+
+eg  
+void myf(char * x)
+Above is the prototype in the header. 
+But in main you just put
+	myf(x)
+
+
+cash:
+while(cash >= fifty) {do this} THis works
+while(cash => fifty) {do this} error: expected expression
+THE SECOND EXAMPLE DOESN'T WORK BECAUSE 'EQUAL TO' COMES BEFORE GREATER THAN!!!
+
+Logical error with cash:
+Asking user for change required = 1.2 dollars.
+The variable begins its journey as a float. float change = get_float("Change Required);
+Now to get to the pennies so you can work with user's input, you need to divide by 100. 1.2 dollars eqauls 120 cents.
+When dividing by 100 you use another variable with data type int to correctly store user's input . eg: int answer = change * 100;
+The error occurs when you don't put the users input into a separate variable with datatypy int. 
+The program will simply keep asking you for input rather than give you the answer you require.
+
+Credit Problem:
+To check starting numbers of digits, you need to make a copy of the original credit card number for this purpose. (original number preserved).
+
+
+General
+Often, you forget to place a comma after datatype placeholder and variable name. EG: printf("%li \n" , credit);
+You do this instead printf("%li \n"  credit);
+
+
+float and get_int.
+very common to set a datatype as a float and when you want input from the user, you automatically type get_int instead of get_float.
+
+
+
+PRINTING LONG NUMBERS
+You don't need an array orloop to print out a credit card number 
+
+eg:
+int main (void)
+{
+    long credit = get_long("Number");
+    
+        printf("%li" , credit);
+}
+//This simply prints out the number you have inputed
+//Working your way through the digits can be done with modulo and division.
+int digit = credit % 10;  //Capture the lastmost digit from the long number (modulo)
+credit = credit / 10;  //divide credit by 10 to get to the next digit you want to access (division)
+
+
+
+
+//##########################################################
+When using constants, they can't be added to abbreviated arrays such as first example below.(error! variable-sized object may not be initialized).
+HOWEVER, in the first example, N in int assigns[N]  can be replaced with number of variables (3), or it can be left blank altogether.
+
+Example 1
+const int N = 3;
+int main (void)
+{
+      int assigns[N] = {43, 34, 43};//So this needs to be int assigns[3] or int assign[] in order for it to work
+      
+      printf("%i \n",  (assigns[0] + assigns[1] + assigns[2]) / N);
+}
+
+Example 2
+IT DOES, HOWEVER WORK IN THE EXAMPLE BELOW WHERE ARRAYS ARE LAYED OUT AND ITEMISED THUS.
+const int N = 3;
+int main (void)
+{
+      int assigns[N];
+      assigns[0] = 43;
+      assigns[1] = 33;
+      assigns[2] = 49;
+      
+      printf("%i \n",  (assigns[0] + assigns[1] + assigns[2]) / N);
+}
+
+#################################################################
+
+User input from the command line.
+int main(int argc, string argv[]
+'int argc counts the number of strings (arrays of strings).
+'int argv stores the string values in an array (square brackets required to ensure string argv is indeed an array.
+The first value/string of the array is the name of the file <./hello>.
+Common error is to ommit either 'string' or '[]' at end of argv. Both argc and argv are named by convention.
+
+
+
+
+*SEGMENTATION FAULTS*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+1) Segmentation fault with hard coded variables.
+
+In this example, seg fault is returned because you hardcoded *one. It's appears to be as simple as that. 
+This seg fault is elimenated when you change 
+char *one = "ivy" to 
+char *one = get_string("String: "); (I don't know why but it solves the problem.)
+ {
+   char *one = "Ivy";//Here, changing this to get_string("name;" ); solves the seg fault issue. 
+   char *two = "one";
+   one[0] = toupper(one[0]);
+   printf("%s\n",one);
+   printf("%s\n",two);
+}
+STOPPED HERE
+ONCE YOU UNDERSTAND RETURN VALUES FOR C AS A DIGIT, HAVE A LOOK AT BOOL
+2) Can happen if you ommit [i] within a for loop condition.
+isdigit = a digit between zero  and 9 (betwenn 48 and 57 inclusive on the ascii table)
+Example below:
+***if(isdigit(a[i]))***It needs the [i] which can be often missed
+bool check_digit(string a)
+{
+    for (int i = 0; i < strlen(a); i ++)
+    {
+        if(isdigit(a[i]))
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+3) Can happen when you haven't added a return value.
+
+Example below :
+The 'return 1;' at 'else', stops the program running since a certain condition is 
+not met.
+If you ommit 'return 1; here, you get a warning 'segmentation fault'.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+###############################################
+int main(int argc, string argv[])
+{
+   if (argc == 2  )
+   {
+      char* plain_text = get_string("plaintext: ");
+   }
+
+   else
+   {
+       printf("Error! PLEASE RE-ENTER\n");
+       return 1;
+   }
+   int k = atoi(argv[1]);
+   while (k < 1)
+   {
+       printf("Usage: ./caesar key\n");
+   }
+
+   while (k > 26)
+   {
+      k =  k % 26;
+   }
+}
+################################################
+
+
+
+
+
+
+
+
+
+
+
+
+int main(void)//create two pointers that point to the same char
+
+{
+   string nim = get_string("name:");
+   string nib = nim;
+   nim[0] = toupper(nim[0]);
+   printf("%s\n",nib);
+   printf("%s\n",nim);
+
+}
+
+//Where you replace get_string("name:"), with a 
+//hardcoded value "blink", Although the code runs
+//fine, it produces a "segmentation fault" rather 
+//than the expected output.
