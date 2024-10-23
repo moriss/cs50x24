@@ -1,5 +1,9 @@
 #####
-Try to write 5 versions of a program/function using this.
+Try to write 1of5 versions of a program/function using the function creation guide below.
+Your starting place is try.c to check what you need to do next. Remember to save the try.c code into the relevant folder and mark what number you are on.
+2.Check written notes for your next task.
+3.Watch video.
+
 Function creation guide:
 1:Written in main
 2:Written as its own function with not i/o if poss

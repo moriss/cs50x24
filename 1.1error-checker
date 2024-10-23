@@ -1,4 +1,11 @@
 Error checker
+
+15th October 24
+I added 'void' within main when calling the 'my' function. I should have ommited 'void' and just had: my(one,two);
+ warning: parameter names (without types) in function declaration
+  void my(one,two);
+
+
 The easiest way to use this file is to paste actual error messages you experience and write down the fix alongside it. 
 
 September 24

@@ -1,0 +1,25 @@
+#3=.Written with i but no o if poss
+#include<stdio.h>
+#include<cs50.h>
+void my(int a,int b);
+
+int main()
+{
+        int one=get_int("Enter number 1: ");
+        int two=get_int("Enter number 2: ");
+        my(one,two);
+}
+
+void my(int a, int b)
+{
+        if(a<b){
+        printf("a is less than be ");
+        }
+        else if(a>b){
+        printf("a is greater than b");
+        }
+        else {
+        printf("a and b are the same");
+        }
+}
+

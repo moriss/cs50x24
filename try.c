@@ -1,31 +1,19 @@
-//Compare two numbers. Test which is greater.12 345
+	//Create a while loop counting from 3 to 0 1 2345
+//y_or_nTest if user intered lowercase y or n 1 2 345
+//Compare two numbers. Test which is greater.1234 5
 //Asks someone's name and greet them. 
 
-#include<cs50.h>
+//written with i but no 0
+
 #include<stdio.h>
-void my();
+#include<cs50.h>
+
 int main()
 {
-	my();
-}
-
-
-void my()
-{
-	int one=get_int("First Number: ");
-	int two=get_int("Second Number: ");
-
-	if(one<two)
+	int counter=3;
+	while(counter>0)
 	{
-		printf("%i is greater than %i \n " , two,one);
+		counter = counter -1;
+		printf("%i \n",counter);
 	}
-	else if(one>two)
-        {
-                printf("%i is greater than %i \n " , one,two);
-        }
-	else
-        {
-                printf("%i is the same as %i \n " , two,one);
-        }
-
 }

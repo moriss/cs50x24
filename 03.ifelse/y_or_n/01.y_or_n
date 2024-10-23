@@ -1,0 +1,24 @@
+
+        //y_or_nTest if user intered lowercase y or n 1 2 345
+
+
+#include<stdio.h>
+#include<cs50.h>
+
+int main()
+{
+        char answer=get_char("Enter 'y' or 'n'");
+
+        if(answer=='y')
+        {
+                printf("You entered %c \n " , answer);
+        }
+        else if(answer=='n'){
+                printf("You answered %c \n " , answer);
+        }
+        else
+        {
+                printf("You entered an invalid character");
+        }
+}
+
