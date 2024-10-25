@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<cs50.h>
+
+void my();
+
+int main()
+{
+        my();
+}
+
+void my(){
+        int i = 4;
+        while(i>0){
+        printf("%i \n",i);
+        i--;
+}
+}
+
+

@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<cs50.h>
+
+int main()
+{
+        int i = 4;
+        while(i>0){
+        printf("%i \n",i);
+        i--;
+}
+
