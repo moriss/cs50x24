@@ -1,0 +1,20 @@
+//2 With with void input and output
+#include<stdio.h>
+#include<cs50.h>
+void my();
+
+int main()
+{
+                my();
+}
+
+void my()
+{
+        int answer=get_int("Enter a number ");
+        while(answer>=0)
+        {
+                printf("%i \n ",answer);
+                answer--;
+        }
+}
+

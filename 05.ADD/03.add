@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<cs50.h>
+void my(int a, int b);
+int main()
+{
+        my(3,4);
+}
+
+void my(int a, int b)
+{
+        printf("%i \n" , a+b);
+}
+
+

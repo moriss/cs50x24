@@ -1,0 +1,40 @@
+//3 With input but no output
+#include<stdio.h>
+#include<cs50.h>
+void my(int c);
+
+int main()
+{
+        int answer=get_int("Pick a number ");
+        my(answer);
+}
+
+void my(int c)
+{
+        while(c>=0)
+        {
+                printf("%i \n ",c);
+                c--;
+        }
+}
+
+
+
+or
+
+void my(int a);
+int main()
+{
+        my(8);
+}
+
+void my(int a)
+{
+        int i=0;
+        while (i<a)
+        {
+                printf("%i \n",a);
+                a--;
+        }
+}
+

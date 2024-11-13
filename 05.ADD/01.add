@@ -1,0 +1,13 @@
+/// Create an add function 123456
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+        int firsT=get_int("First number to add ");
+        int seconD=get_int("Second number to add ");
+        int result=firsT+seconD;
+        printf("%i \n",result);
+}
+
+
+

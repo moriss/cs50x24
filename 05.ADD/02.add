@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<cs50.h>
+void my();
+int main()
+{
+        my();
+}
+
+void my()
+{
+        int a = get_int("Enter your first number ");
+        int b = get_int("Enter your second number ");
+        int c = a+b;
+        printf("The anwser to %i + %i is %i \n ", a,b,c);
+}
+
+

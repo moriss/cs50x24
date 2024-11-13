@@ -1,0 +1,14 @@
+//1 Written in main
+#include<stdio.h>
+#include<cs50.h>
+
+int main()
+{
+        int answer=get_int("Enter a number ");
+        while(answer>=0)
+        {
+                printf("%i \n ",answer);
+                answer--;
+        }
+}
+
