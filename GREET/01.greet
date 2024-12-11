@@ -1,0 +1,10 @@
+// Asks someone's name and GREET them. 12345
+
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+        char * name=get_string("WHat is your name? ");
+        printf("Well Hello %s \n " , name );
+}
+

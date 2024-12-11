@@ -1,0 +1,27 @@
+// 123  Creat an ADD function 456
+// 123 Create a while loop COUNTDOWN from n to 0 45
+   // 12345  Create a FOR-LOOP counting from 0 to n 6
+// 1 y_or_nTest if user intered lowercase y or n 2345
+// 123Compare two numbers. Test which is greater.45
+// Asks someone's name and greet them. 12345
+
+#include<stdio.h>
+#include<cs50.h>
+
+int my(int a);
+
+int main()
+{
+	int numb=get_int("Number: ");
+	int result = my(numb);
+	printf("%i \n " , result);
+}
+
+int my(int a)
+{
+	for(int i = 0; i<=a; i++)
+		{
+			printf("%i \n ", i);
+		}
+	return a;
+}

@@ -1,0 +1,28 @@
+ // 12 Test if user entered YES_OR_NO 2345
+
+#include<stdio.h>
+#include<cs50.h>
+void my();
+int main()
+{
+        my();
+}
+
+void my()
+{
+        char x = get_char("Did you like the film? answer y or n ");
+
+                if (x=='n')
+                {
+                printf("I'm sorry you didn't like it!\n ");
+                }
+                else if (x=='y')
+                {
+                printf("I'm really glad you liked the film\n ");
+                }
+                else
+                {
+                printf("Please answer y or n\n ");
+                }
+}
+
