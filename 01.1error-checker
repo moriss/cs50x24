@@ -1,5 +1,12 @@
 Error checker
 
+11th December 25
+Below printed when I forgot curly braces after the while condition.
+EG while (x > y)
+ 
+ warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]
+
+
 15th October 24
 I added 'void' within main when calling the 'my' function. I should have ommited 'void' and just had: my(one,two);
  warning: parameter names (without types) in function declaration

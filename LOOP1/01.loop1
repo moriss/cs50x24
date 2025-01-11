@@ -1,0 +1,50 @@
+
+// 1aCreate a LOOP1 to print n numbers of a char in a row.23456
+
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+        for (int i=0; i<3; i++)
+        {
+                printf("Q");
+        }
+printf("\n");
+}
+
+##############
+
+// 1bCreate a LOOP1 to print n numbers of a char in a row.23456 c
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+        int i = get_int("How many hashes ?");
+        int j=0;
+        while(j<i)
+        {
+                printf("#");
+                j++;
+        }
+                printf("\n");
+}
+
+
+
+##################
+
+// 1cCreate a LOOP1 to print n numbers of a char in a row.23456 c
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+        int i=get_int("Type a number ");
+        int j=0;
+        do{
+                printf("#" );
+                j++;
+        }
+        while(j<i);
+        printf("\n");
+}
+
