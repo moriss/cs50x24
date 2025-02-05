@@ -1,7 +1,8 @@
 //1 Written in main
 #include<stdio.h>
 #include<cs50.h>
-
+// (HOLIDAY1ABC) 123 COUNTDOWN from n to 0 45
+//A=FOR LOOP
 int main()
 {
         int answer=get_int("Enter a number ");
@@ -10,5 +11,33 @@ int main()
                 printf("%i \n ",answer);
                 answer--;
         }
+}
+
+//B=WHILE LOOP
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+        int a=get_int("Number: ");
+        while(a>0)
+        {
+                printf("%i ", a);
+                a--;
+        }
+}
+
+
+//C=DO WHILE LOOP
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+        int a=get_int("Number ");
+        do
+                {
+                        printf("%i ",a);
+                        a--;
+                }
+                while(a>0);
 }
 

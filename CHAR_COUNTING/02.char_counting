@@ -1,0 +1,70 @@
+
+A
+#include<stdio.h>
+#include<cs50.h>
+#include<string.h>
+void my();
+
+int main()
+{
+        my();
+}
+
+void my()
+{
+        char n = get_char("Give me a letter");
+        int numb=get_int("Give me a number ");
+        for (int i = 0; i < numb; i++)
+        {
+                printf("%c " , n);
+        }
+
+#######
+B
+#include<stdio.h>
+#include<cs50.h>
+#include<string.h>
+void my();
+
+int main()
+{
+        my();
+}
+
+void my()
+{
+        char x = get_char("Give me a letter ");
+        int a = get_int("Give ma a number ");
+        int i=0;
+        while(i<a)
+        {
+                printf("%c ", x);
+                i++;
+        }
+}
+
+#######
+C
+// 12c Create CHAR_COUNTING to print n numbers of a char in a row.23456
+#include<stdio.h>
+#include<cs50.h>
+#include<string.h>
+void my();
+int main()
+{
+        my();
+
+}
+
+void my()
+{
+        int a=get_int("Pick a number");
+        int c=0;
+        do
+        {
+                printf("n");
+                c++;
+        }
+        while(c<a);
+}
+

@@ -1,0 +1,50 @@
+//The holiday period is now over. Revert back to the system. Where Loops are used, try all three (1=for, 2=while and 3=do while loops)
+ 
+
+//ALSO, LOOK UP (VIA GOOGLE) HOW THE WALL BUILDING LOOPS WORK. 
+  //(HOLIDAY1) 123  Creat an ADD function (H)456
+// (HOLIDAY1AB) 123 COUNTDOWN from n to 0 45 
+ // (HOLIDAY 1A) 1A Create COUNT_UP TO count from 0 to n 23456 BC
+//  (HOLIDAY1) 12 Test if user entered Y_OR_N 345 (H)
+// (HOLIDAY1)1234 COMPARE two numbers. Test which is greater.(H)5
+// (HOILDAY1) 1 Asks someone's name and GREET them. 2345 (H)
+//  1 Test if user entered the strings YES_OR_NO 2345  
+
+// 12c Create CHAR_COUNTING to print n numbers of a char in a row.23456 
+// Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 123456abc
+// 1 Use SWITCH to determine if a number is small, medium or large. 123456
+
+#include<stdio.h>
+#include<string.h>
+#include<cs50.h>
+int main()
+{
+        int a =get_int("Pick a number ");
+        switch (a)
+	{
+        	case 1:
+        	case 2:
+        	case 3:
+        		printf("You picked a small integer ");
+        		break;
+
+        	case 4:
+        	case 5:
+        	case 6:
+        		printf("You picked a medium number ");
+        		break;
+
+        	case 7:
+        	case 8:
+        	case 9:
+        	case 10:
+        		printf("You picked a large number ");
+        		break;
+
+        default: printf("You picked an invalid number ");
+	}
+}
+
+
+
+

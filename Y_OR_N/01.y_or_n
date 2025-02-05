@@ -1,0 +1,16 @@
+ // 1 Test if user entered Y_OR_N 2345
+#include<stdio.h>
+#include<cs50.h>
+
+int main()
+{
+        char n =get_char("Did you like the film? y or n ");
+        if (n=='n'){
+        printf("Oh! that's a shame \n ");
+        }
+else if(n=='y'){
+        printf("Oh great!, I'm glad you liked it ");
+        }
+else (printf("Please answer with a lowercase y or n"));
+}
+

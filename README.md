@@ -1,5 +1,8 @@
 #####
-Try to write 6 versions of a program/function using the function creation guide below. Move the numbers achieved to the left of the description and only remove it from the right of the description when the taks is complete and added to your own folders, (ADD etc).
+*HOLIDAY section: This is a revision system whereby you only write code you have already saved in your capitalised files. HOLIDAY is written followed by a letter a,b and c representing for while and do while loops (where loops are required) So the idea is that you only stick with 1 (writing in main) during the holiday period to keep it simple while you revise with less concentration. 
+######
+
+Write 6 versions of a program/function using the function creation guide below. Move the numbers achieved to the left of the description and only remove it from the right of the description when the taks is complete and added to your own folders, (ADD etc).
 Your starting place is try.c to check what you need to do next. Remember to save the try.c code into a folder named the capitalised word in the try.c description. You then number each saved file from 01. to 06.
 Loops are also lettered a:for loop, b:while loop, c:do while loop, to be written below each other in the same file and to follow the same convention as 123456.
 2.Check written notes for your next task.

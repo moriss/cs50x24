@@ -1,0 +1,422 @@
+This is for downloade a new version of the cs50 library so you can work locally.
+
+Go to the https://cs50.harvard.edu/x/2025/ 
+
+On the cs50's Introduction to computer science, scroll to the bottom of the left links to find github
+
+In github you will see the cs50 library for c.
+
+This is the url that comes up when you click on the library:
+https://github.com/cs50/libcs50
+It is this url you use to clone the library in the location of your choice on your device. 
+
+git clone https://github.com/cs50/libcs50.git
+
+	  https://github.com/cs50/libcs50 NB: Modern github url's don't require the .git extension.
+
+so:
+git clone https://github.com/cs50/libcs50  Also works.
+
+
+########################
+An alternative is to add the git library to your repo as a git submodule. This would be like a project inside a project. This will enable you to pull updates rather than having to dowload the latest repo yourself whenever changes are made (as you are doing now). 
+This keeps your repo and the cs50 library (submodule) repo separate, but bear in mind, if someone clones your repo, they won't get the cs50 submodule unless they run:
+git submodule update --innit --recursive
+
+
+And in your case, if the team at scs50 update their library and you have it as a submodule, you can run:
+git pull origin main   and you'll get the new version. 
+######################
+
+
+29th August 24
+You first need to clone the cs50 library by first navigating to the folder in which you want it to reside, then:
+Then: git clone https://github.com/cs50/libcs50.git
+
+Important!
+You need to check the library files have been compiled. These are libcs50.a  libcs50.so and  libcs50.so.11.0.3
+
+If they haven’t been compiled, you can make use of the Makefile that came with the colned cs50 repo by simply running ‘make’ (type ‘make’ then hit return). You do this within the cs50 directory where the Makefile is located.
+
+Once you run make, the following directories are created: 
+build 
+	Include
+	src
+	Lib
+		libcs50.a  libcs50.so  libcs50.so.11.0.3
+
+So now you have successfully compiled the libraries.
+	
+Your file structure should be as follows
+Root (This is just the directory you created to keep your files. Ie cs50test1)
+	Libcs50(The library)
+	Try.c (Your files)
+	Makefile (This is your makefile you created by pasting the makefile below)
+
+
+Below is the makefile and as a strong recommendation, use absolute paths for finding things within the makefile rather than trying with a tild ~. This kept throwing up an error until I resorted to /home/bodhi/Desktop/Cs50x_ etc etc,to get the actual location of the library or my source files.
+#################
+PLEASE SIMPLY PASTE THE MAKEFILE CODE BELOW and MAKE NECESSARY CHANGES TO FILE LOCATIONS.
+
+As a recap:
+You wanted to use the cs50 library locally via carl’s command line.
+
+You downloaded it and you needed to compile the library files by running make. 
+You then create your own makefile to easily run your code. 
+
+You wanted to be able to locate the c file by running make with the name of the c file
+EXAMPLE:
+Make try
+./try
+So above you are compiling a .c file called try.c. There may be other c files but it will only pick out try.c because your ran make try. 
+
+
+So far so good. 
+
+You asked chatgpt to create a makefile that would deal with this.
+Chat’s makefile ran into problems because it was using a tild ~ instead of the full filepath to the libcs50 file and the location of your c files. 
+
+Anyway, chat pointed this out and corrected it, so the makefile below is working for the following directory structure on carl;s laptop: You just need to change the file locations as required for future projects. 
+
+
+Directory Structure
+
+Desktop
+	Libcs50
+		build/lib (library files here)
+		Src (cs50.c and cs50.h here)
+
+	Program_carl
+		Makefile and my .c files
+
+Below is the makefile that works. It must be placed in the same folder as your c files.
+
+# Compiler
+CC = gcc
+
+# The CS50 library path (Change this if the library location changes)
+CS50_PATH = /home/bodhi/Desktop/cs50test1/libcs50
+
+# Directory where your C files are located
+SRC_DIR = /home/bodhi/Desktop/cs50test1
+
+# Flags for the compiler
+CFLAGS = -Wall -Wextra -I$(CS50_PATH)/src
+
+# Flags for the linker
+LDFLAGS = -L$(CS50_PATH)/build/lib -lcs50
+
+# Rule to build the specific target from the corresponding .c file
+%: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
+
+# Clean up the compiled files
+clean:
+	rm -f $(SRC_DIR)/*
+
+
+####################
+
+
+
+
+
+
+
+
+
+
+
+Below is older and probably won’t work.
+
+
+
+#################
+
+# Compiler
+CC = gcc
+
+# Paths
+CS50_PATH = libcs50
+SRC_DIR = .
+
+# Compiler and linker flags
+CFLAGS = -Wall -Wextra -I$(CS50_PATH)/src
+LDFLAGS = $(CS50_PATH)/build/lib/libcs50.a
+
+# Target executable
+TARGET = try
+
+# Default rule to build the target
+all: $(TARGET)
+
+# Rule to build the target from the .c file
+$(TARGET): $(SRC_DIR)/try.c
+        $(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
+
+# Clean up build artifacts
+clean:
+        rm -f $(TARGET)
+#######################
+
+
+
+
+
+18th August 24
+This has to do with the makefile in carl/desktop/Cs50x_practice_21. You also have the libcs50 library in here and you own source file currently named try.c
+
+You ran into a very time consuming issue with the makefile when you returned to it and tried to run some code. 
+It basically couldn’t find the library. You came back to it later and asked chat the following questions in Makefile for cs50 library:
+
+I would like to start from the beginning as I seem to have reached a dead end. so: I have a folder called Cs50x_practice_21. |Inside this folder is the libcs50 library, downloaded from cs50 git. I also have a try.c file that is my source file for writing code. The libcs50 folder structure is as follows. libcs50/src/cs50.h cs50.c libcs50/build/lib/libcs50.a libcs50.so libcs50.so.11 . Now I don't mind only using the libcs50.a library and I need a makefile in order to run my code. So please can you make my makefile that will work.
+
+So I think the best option (rather than scratching and patching to put things right [which is very time consuming] is to simply ask chatgpt the question above. Be sure to including accurate file paths for the library and your source files and also explain [if not already done so] that you want to run: 
+make try 
+then you want the makefile to compile the try.c file by running 
+./try
+
+If it doesn’t work, then just ask the same question above. Here is the Makfile contents and below is a historical explanation:
+
+
+# Target executable
+TARGET = try
+
+# Default rule to build the target
+all: $(TARGET)
+
+# Rule to build the target from the .c file
+$(TARGET): $(SRC_DIR)/try.c
+        $(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
+
+# Clean up build artifacts
+clean:
+        rm -f $(TARGET)
+
+
+
+
+I’ll do my best to explain clearly.
+
+
+
+
+Below is from a deleted file:
+Chat gpt title:  Clone cs50 Library Folder
+
+9th April 24
+You have made a slight change in your cs50 library location. It wasn’t a good idea to place it in the Cs50x_practice_21 repo so you have moved it out of it and onto the desktop.
+The only difference is that when using the gcc compiler you need to have 2 dots after the I../ and L../ to ensure the folder one level up is searched.
+
+Using the cs50 library locally
+
+[Just as a side note, chatgpt says I don’t need any links in the gcc command other than -lcs50, if I place the .a or .so files and the header files in the default locations within linux. I haven’t tried this but might at a later date].
+
+gcc -o master master.c -lcs50
+
+
+To start from the beginning
+Before we begin, as a shortcut, this is the command line instruction and explanation to compile your c file
+gcc -o AAtest /home/maurizio/Desktop/Cs50x_practice_21/AAtest.c -I./libcs50/src c-L./libcs50 -lcs50
+The above was cloned into Deskop/Cs50x_practice_21 where your own c file lives. 
+
+Explanation.
+##########
+AAtest : name of output file (binary)
+
+/home/maurizio/Desktop/Cs50x_practice_21/AAtest.c
+: This shows the full file path to your c file. The local path didn’t work for some reason.
+
+-I./libcs50/src : This is to include your headers. 
+
+-L./libcs50 : Tells the compiler to search for library files (capital L for “Look”)
+
+-lcs50 : Tells the linker to link against the cs50 library. [NB: by convention, it doesn’t use the ‘lib’ prefix]. So the linker is searching for libcs50.a or libcs50.so using -lcs50
+
+##########
+
+
+
+So FROM THE START! 
+Clone the cs50 library from the command line:
+
+git clone https://github.com/cs50/libcs50.git
+
+
+
+BLUE LAPTOP BLUE LAPTOP BLUE LAPTOP BLUE LAPTOP BLUE LAPTOP
+Directory location relative to your_c_file.c
+
+So in your desktop folder, you have Cs50x_practice_21 with libcs50 [which is the previously cloned cs50 library] and your_c_file.c which is your file for adding code and functions etc. 
+
+Bear in mind, in the libcs50 you have a src file which contains cs50.c and cs50.h 
+
+#####
+ACTION 1:
+First you need to actually compile the cs50 library into a library file (such as libcs50.a or libcs50.so) Chat said to do this because neither of these files were present when you cloned it. 
+
+So this involves two steps.
+
+First you need to Compile cs50.c into an Object File: (cs50.o). You do this with the linux built -in compiler gcc:
+
+gcc -c -o cs50.o src/cs50.c
+
+You should now have a cs50.o in your cs50 library directory. Notice how the cs50.o is one level up from the cs50.c which resides in the src file. 
+
+Second: Now it’s time to create your library file using your newly created object file, with the following command
+
+ar rcs libcs50.a cs50.o
+
+And this creates a libcs50.a file in the same directory as cs50.o
+########
+
+Now as a recap, you have the newly created libcs50.a library file in the cs50_library directory,  and the cs50.c and a cs50.h in a folder called src (which came with the cloned repo).
+You then compiled the src/cs50.c file into the cs50.o object file which resides one level up from the cs50.c file.
+
+So I now think you have everything you need!
+Now, you should have a libcs50.a library file containing the compiled cs50 library.
+END OF BLUE LAPTOP
+
+
+Next is Carl laptop
+
+
+
+
+Below is a chatgpt work-through of getting the cs50 library to work locally. 
+It’s a useful read if you want to do it again.
+
+
+
+
+
+So your next step should be to download the cs50 library so you can easily link it to your first.c file.
+
+
+git clone https://github.com/cs50/libcs50.git
+
+
+
+
+
+THE STEPS BELOW ARE SIMILAR TO WHATS IN YOUR GOOGLE DRIVE/AA TERMINAL FOLDER
+BELOW CAN BE LOOKED THROUGH LATER. FOCUS FOR NOW ON THE DRIVE FILES FOR AUTHENTICATION AND COMMANDS
+So now it's time to clone to local.
+git clone https://github.com/cs50/libcs50.git
+This was successful. All files on github are now on your local machine. 
+
+STOPPED HERE
+The next step is to make changes and push updates from local to github.
+
+AND JUST BEAR IN MIND YOU NEED TO NOW BE WORKING ON THE NEWLY CLONED FILES AT DESKTOP/cs50x_practice_21
+
+
+I'm getting chatgpt to help me with this, so below is the chat(named Change File Name). I will ask further questions as I go to help clarify anything. 
+
+1.
+So it is asking me to firstly 'stage' the changes I want to commit
+git add .     I think the dot refers to staging ALL files.Otherwise you would simply name all the files you want to stage. 
+
+
+These are extra questions I had. Try and implement them into the chat as you ask further clarifying questions.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Further question: What is 'staging' exactly and what does the dot refer to in git add .
+Answer:
+Staging allows you to selectively choose which changes(files) you want to include in your next commit. The staging area serves as a middle ground between your working directory (where you make changes) and your Git repository (where changes are committed).
+
+# Stage all changes in the current directory and its subdirectories
+git add .
+
+
+Stage multiple specific files:
+git add file1.txt file2.txt file3.txt
+
+
+Stage all changes in the current directory and its subdirectories:
+git add .
+
+
+Stage changes in a specific directory:
+git add path/to/directory/
+Please note that this directory does not need to match a directory name on github. However, the filenames MUST match in order for the update to work.
+You can also push files to github that have been created locally but don't yet exist on github. 
+Her's how to do it:
+Stage and Commit the new File:
+As above, stage the new file using the git add command, and then commit your changes with a meaningful commit message, as follows:
+git add newfile.txt
+
+
+NOW IT'S TIME TO ACT.
+STAGING
+git add .
+Ok so we're getting an error.     not a git repository   I'm guessing this means that I have simply created a local directory with files that match what's on my github. BUT THE LOCAL DIRECTORY IS NOT A GIT REPOSITORY.
+So I think the best thing to do is paste local files into github files so they are all updated then pull the directory to a desired local location so I have the github repo saved locally. This will enable me to push updates of all files in future.  
+In addition to this I have just added 1.git_story , 1.terminal_commands , basics and readme to the github repo cs50x_practice_21  (The official repo name on gitub) 
+
+STOPPED HERE
+So the next step is to pull the repo locally (all files) so you can begin working on them and easily updating then onto github as you go.
+
+
+COMMITTING
+git commit -m "write something meaninfull here"
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+My username is moriss
+My password might be G56i10T12@
+Then it tells me to commit my changes
+git commit -m "Type a message here"
+
+
+
+
+
+Link your local repository to GitHub:
+
+
+
+Below is a side note to add any Git repository to GitHub Desktop, even if it's not a GitHub repository.
+NOt currently relevant but could be useful.
+#######
+I found the below resource to specifically help me 
+Resource:https://docs.github.com/en/desktop/adding-and-cloning-repositories/adding-a-repository-from-your-local-computer-to-github-desktop
+You can add any Git repository to GitHub Desktop, even if it's not a GitHub repository.
+#######
+
+
+
+If you haven't linked your local repository to your GitHub repository, use the following command, replacing <your-username> and <repository-name> with your GitHub username and repository name: 
+
+git remote add origin https://github.com/<your-username>/<repository-name>.git
+
+
+
+Push your changes to GitHub:
+Finally, push your committed changes to GitHub:
+
+git push -u origin master
+
+
+If you are working on a branch other than master, replace "master" with the name of your branch.
+
+Make sure you have the necessary permissions to push to the repository on GitHub. You may need to enter your GitHub username and password during the push process. If you prefer not to enter your password each time, consider using SSH keys for authentication.
+
+
+ 
+
+
+
+
+
+
+
+
+		
+
+	
+
+		
+
+
+
+

@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+#include<cs50.h>
+int main()
+{
+        int a =get_int("Pick a number ");
+        switch (a)
+        {
+                case 1:
+                case 2:
+                case 3:
+                        printf("You picked a small integer ");
+                        break;
+
+                case 4:
+                case 5:
+                case 6:
+                        printf("You picked a medium number ");
+                        break;
+
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                        printf("You picked a large number ");
+                        break;
+
+        default: printf("You picked an invalid number ");
+        }
+}
+

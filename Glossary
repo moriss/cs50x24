@@ -1,0 +1,1 @@
+if(strcmp(approval,"Yes")==0)  Compare if two strings are the same

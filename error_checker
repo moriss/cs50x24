@@ -1,7 +1,13 @@
 Error checker
 
+27th January 25
+Below, the #include<string.h> was missing
+ warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+  if(strcmp(approval,"Yes")==0);
+
+
 11th December 25
-Below printed when I forgot curly braces after the while condition.
+1: Below printed when I forgot curly braces after the while condition.
 EG while (x > y)
  
  warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]

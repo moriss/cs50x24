@@ -1,0 +1,16 @@
+// (HOLIDAY 1A) 1A Create COUNT_UP TO count from 0 to n 123456 ABC
+//A for loop
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+        int a=get_int("Number ");
+        for (int i =0; i<=a; i++)
+        {
+                printf("%i ",i);
+        }
+}
+
+//B while loop
+
+//C do while loop

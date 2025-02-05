@@ -1,16 +1,14 @@
- // 1 Test if user entered YES_OR_NO 2345
 #include<stdio.h>
 #include<cs50.h>
-
+#include<string.h>
 int main()
 {
-        char n =get_char("Did you like the film? y or n ");
-        if (n=='n'){
-        printf("Oh! that's a shame \n ");
-        }
-else if(n=='y'){
-        printf("Oh great!, I'm glad you liked it ");
-        }
-else (printf("Please answer with a lowercase y or n"));
+        char*approval=get_string("Please enter yes or no");
+        if(strcmp(approval,"Yes")==0)
+        printf("You printed Yes\n");
+        else if(strcmp(approval,"No")==0)
+        printf("You did not approve the request\n");
+
+
 }
 
