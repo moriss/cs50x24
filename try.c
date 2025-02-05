@@ -23,8 +23,6 @@
 int main()
 {
 	printf("Give me a number ");
-	int n = get_int();
-	printf("%i ",n);
 	
 
 }
