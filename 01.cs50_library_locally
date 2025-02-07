@@ -26,7 +26,32 @@ This keeps your repo and the cs50 library (submodule) repo separate, but bear in
 git submodule update --innit --recursive
 
 
-And in your case, if the team at scs50 update their library and you have it as a submodule, you can run:
+Now before downloading the cs50 library as a submodule, you need to do two things.
+1: Back up your existing repo using this 'mirror' operator. 
+
+ git clone --mirror git@github.com:moriss/cs50x24.git cs50x24_backup
+
+This will put your repo into a file called cs50x_backup, saving your entire git history for this repo. 
+
+2: Remove the current library from git tracking (you added it as a regular directory rather than a submodule) then add it as a submodule.
+
+Here is the code:
+git rm -r --cached libcs50
+rm -rf libcs50
+git add . (just in case)
+git commit -am "Removed libcs50 to then add as a submodule"
+git push origin main
+
+And now add the cs50 library as a submodule:
+git submodule add https://github.com/cs50/libcs50
+
+git add . 
+git commit -am "The new submodule"
+git push origin main
+
+
+
+And in your case, now if the team at scs50 update their library and you have it as a submodule, you can run:
 git pull origin main   and you'll get the new version. 
 ######################
 
