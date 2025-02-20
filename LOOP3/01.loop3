@@ -1,0 +1,19 @@
+1.for
+int main()
+{
+        int num=get_int("Enter a number");
+        for(int i =0; i < num; i++)
+        {
+                for(int j=0; j<num; j++)
+                {
+                        printf("#");
+                }
+
+        printf("\n");
+        }
+}
+#####
+2.while
+###
+3.do while
+###
