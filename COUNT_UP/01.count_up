@@ -12,5 +12,41 @@ int main()
 }
 
 //B while loop
+// 1B Create COUNT_UP TO count from 0 to n 23456 BC
+//While loop
+
+#include<stdio.h>
+#include<cs50.h>
+#include<string.h>
+int main()
+{
+        int a = get_int("Give me a number to count up to ");
+        int counter = 0;
+        while(counter <= a)
+        {
+                printf("%i ", counter);
+                counter++;
+        }
+        printf("\n");
+}
+
+
 
 //C do while loop
+ // 1C Create COUNT_UP TO count from 0 to n 23456 C
+#include<stdio.h>
+#include<cs50.h>
+#include<string.h>
+int main()
+{
+        int a = 15;
+        int count = 0;
+        do{
+        printf("%i " , count);
+        count++;
+        }
+        while(count < a);
+        printf("\n");
+}
+
+
