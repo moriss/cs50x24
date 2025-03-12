@@ -1,0 +1,22 @@
+// 2A Create COUNT_UP TO count from 0 to n 2ABC 3456
+#include<cs50.h>
+#include<stdio.h>
+#include<string.h>
+void stump();
+int main()
+{
+        stump();
+}
+
+void stump()
+{
+        int a =8;
+        for (int i = 0; i < a; i++)
+        {
+                printf("%i \n ", i);
+        }
+}
+
+//2b
+
+//2c

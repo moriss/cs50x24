@@ -1,0 +1,25 @@
+//  3 Test if user entered Y_OR_N 3456
+
+#include<cs50.h>
+#include<stdio.h>
+#include<string.h>
+void has(char a);
+
+int main()
+{
+        char x =  get_char("Enter Y or N ");
+        has(x);
+}
+
+
+void has(char a)
+{
+        if(a =='Y'){
+                printf("%c Means Yes \n " , a);
+                }
+        else if(a =='N')
+                {
+                        printf("%c Means No \n " , a);
+                }
+}
+
