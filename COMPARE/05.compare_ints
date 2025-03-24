@@ -1,0 +1,28 @@
+// 12345 COMPARE two numbers. Test which is greater.5
+#include<stdio.h>
+#include<cs50.h>
+#include<string.h>
+int chi(int a, int b);
+
+int main()
+{
+        int one = get_int("First Number");
+        int two = get_int("Second Number");
+        int a = chi(one, two);
+        printf("%i \n " , a );
+}
+
+
+int chi(int a, int b)
+{
+        if (a < b)
+        {
+                return b;
+        }
+        else if (a > b)
+        {
+                return a;
+        }
+        else return  10;
+}
+
