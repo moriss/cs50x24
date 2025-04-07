@@ -1,0 +1,24 @@
+//  2.v1 Test if user entered the strings YES_OR_NO 2345
+void my();
+int main()
+{
+        my();
+}
+
+void my()
+{
+        char* permission = get_string("Do you aprove ? ");
+        if(strcmp(permission,"Yes")==0)
+        {
+                printf("You said Yes! \n ");
+        }
+        else if(strcmp(permission,"No")==0)
+        {
+                printf("You typed NO! \n ");
+        }
+        else
+        {
+                printf("You didn't type either yes or no! \n " );
+        }
+}
+

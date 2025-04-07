@@ -1,0 +1,33 @@
+// 3a Create CHAR_COUNTING to print n numbers of a char in a row.3456
+//a
+void zam(int x);
+int main()
+{
+        int x=get_int("Print a number");
+        zam(x);
+}
+
+void zam(int x)
+{
+        for(int i =0; i<x; i++)
+        {
+                printf("H");
+        }
+}
+
+//b
+
+void stin(int x);
+int main()
+{
+        int n=get_int("Pick a number");
+        stin(n);
+}
+
+void stin(int x)
+{
+
+
+//c
+
+

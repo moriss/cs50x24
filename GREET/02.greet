@@ -1,0 +1,15 @@
+// 2 Asks someone's name and GREET them. 2345
+#include<stdio.h>
+#include<cs50.h>
+#include<string.h>
+void vlas();
+int main()
+{
+        vlas();
+}
+void vlas()
+{
+        char* x = get_string("What is your name? ");
+        printf("Hello %s \n " , x);
+}
+
