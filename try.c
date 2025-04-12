@@ -1,7 +1,11 @@
 //Complete all possible types of loops (ABC) from 1 to 6.
 //Create 3 versions of each code instruction (v1. v2. and v3)
+//If unsure about last peice of code, repeat attempt 
 
 //Type your code here
+//1b Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1
+//ON REPEAT
+
 
 
 // 1234  Creat an ADD function 56
