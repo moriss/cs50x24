@@ -25,7 +25,7 @@ int main()
                         printf("You picked a large number ");
                         break;
 
-        default: printf("You picked an invalid number ");
+        default: printf("You picked an invalid number ");//This occurs if you haven't chosen a value found in any of the cases above.
         }
 }
 

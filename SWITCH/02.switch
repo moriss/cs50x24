@@ -1,0 +1,29 @@
+int main()
+{
+        my();
+}
+void my()
+{
+        int x = get_int("Give me a number");
+        switch(x)
+        {
+                case 1:
+                case 2:
+                case 3:
+                        printf("You picked a small number");
+                        break;
+                case 4:
+                case 5:
+                case 6:
+                        printf("You picked a medium number");
+                        break;
+                case 7:
+                case 8:
+                case 9:
+                        printf("You picked a big number");
+                        break;
+                default: printf("You haven't picked a number");
+        }
+
+}
+

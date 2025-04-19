@@ -7,6 +7,7 @@
 //Type your code here
 
 
+
 // 1234  Creat an ADD function 56
 //  123 COUNTDOWN from n to 0 45 
 // 2B Create COUNT_UP TO count from 0 to n 2BC 3456 
@@ -18,5 +19,6 @@
 // 3c Create CHAR_COUNTING to print n numbers of a char in a row.3456 V1 
 //1c Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1
 
-// 2 use SWTICH to categorise the user's number into small,medium or large 23456 v1
+// 3 use SWTICH to categorise the user's number into small,medium or large 3456 v1
 // 1B Create COUNT_UP TO count from 0 to n 23456 BC
+//1 Calculate users WAGE  including time and a half for hours over 40 123456 v1
