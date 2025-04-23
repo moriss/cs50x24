@@ -5,13 +5,11 @@
 
 
 //Type your code here
-// 2B Create COUNT_UP TO count from 0 to n 23456 BC v1
-//do while
+}
 
+// 6  Creat an ADD function 6 v1
 
-
-// 1234  Creat an ADD function 56
-//  123 COUNTDOWN from n to 0 45 
+//  4 COUNTDOWN from n to 0 45  v1
 // 2B Create COUNT_UP TO count from 0 to n 2BC 3456 
 //  3 Test if user entered Y_OR_N 456
 // 12345 COMPARE two numbers. Test which is greater.6
@@ -22,5 +20,4 @@
 //1c Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1
 // 3 use SWTICH to categorise the user's number into small,medium or large 3456 v1
 // 2B Create COUNT_UP TO count from 0 to n 23456 BC v1
-
-//1 Calculate users WAGE  including time and a half for hours over 40 123456 v1
+//2 Calculate users WAGE  including time and a half for hours over 40 23456 v1

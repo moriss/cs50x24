@@ -1,0 +1,18 @@
+// 1234  Creat an ADD function 56 v1
+//WITH BOTH INPUT AND OUTPUT
+
+float my(int a, int b);
+int main()
+{
+        int first_number = get_int("Give me your first number");
+        int second_number = get_int ("Give me your second number");
+        float a = my(first_number, second_number);
+        printf("%f \n " , a);
+}
+
+float my(int a, int b)
+{
+        int answer = a*b;
+        return answer;
+}
+

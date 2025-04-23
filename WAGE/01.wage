@@ -1,0 +1,17 @@
+//1 Calculate users WAGE  including time and a half for hours over 40 123456 v1
+int main()
+{
+ int wage = 10;
+ int hours = 50;
+ int income = wage * hours;
+        if (hours > 40)
+                {
+                int overtime = hours - 40;
+                income= (wage*hours) + (overtime * 10 * 0.5);
+                printf("%i \n ", income);
+                }
+        else {
+                printf("%i \n " , income);
+             }
+
+}
