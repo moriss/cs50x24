@@ -5,11 +5,10 @@
 
 
 //Type your code here
-}
 
 // 6  Creat an ADD function 6 v1
+//  6 COUNTDOWN from n to 0 6  v1
 
-//  4 COUNTDOWN from n to 0 45  v1
 // 2B Create COUNT_UP TO count from 0 to n 2BC 3456 
 //  3 Test if user entered Y_OR_N 456
 // 12345 COMPARE two numbers. Test which is greater.6
