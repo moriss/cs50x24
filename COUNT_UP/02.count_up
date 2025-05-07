@@ -18,5 +18,45 @@ void stump()
 }
 
 //2b
+ // 2B Create COUNT_UP TO count from 0 to n 2C 3456
+ // 2B Create COUNT_UP TO count from 0 to n 2C 3456
+ 9 //do wile loop
+10 #include<cs50.h>
+11 #include<stdio.h>
+12 #include<string.h>
+13 void my();
+14 int main ()
+15 {
+16         my();
+17 }
+18 void my()
+19 {
+20         int i = 0;
+21         while(i<8)
+22         {
+23         printf("%i \n ", i);
+24                 i++;
+25         }
+26 }
 
 //2c
+ // 2B Create COUNT_UP TO count from 0 to n 2C 3456
+ 9 //do wile loop
+10 #include<cs50.h>
+11 #include<stdio.h>
+12 #include<string.h>
+13 void my();
+14 int main ()
+15 {
+16         my();
+17 }
+18 void my()
+19 {
+20         int i = 0;
+21         do
+22         {
+23                 printf("%i \n ", i);
+24                 i++;
+25         }
+26         while (i < 8);
+27 }

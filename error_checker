@@ -1,5 +1,9 @@
 Error checker
 
+7th May 25
+Use single quotes for chars ie char n = 'x';
+
+
 27th January 25
 Below, the #include<string.h> was missing
  warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
