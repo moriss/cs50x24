@@ -13,3 +13,20 @@ void vlas()
         printf("Hello %s \n " , x);
 }
 
+
+
+// 2 Asks someone's name and GREET them. 2345 v1
+10 #include<stdio.h>
+11 #include<cs50.h>
+12 void my();
+13 int main()
+14 {
+15         my();
+16 }
+17 void my()
+18 {
+19         string name = get_string("What is your name?");
+20         printf("Hello %s \n " , name);
+21 }
+22
+

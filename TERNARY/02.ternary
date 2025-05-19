@@ -1,0 +1,17 @@
+// 2 Do a TERNARY if else comparing two chars 23456
+12 #include<stdio.h>
+13 #include<cs50.h>
+14 void my();
+15 int main()
+16 {
+17         my();
+18 }
+19 void my()
+20 {
+21         int a = 5;
+22         int b = 4;
+23         (a < b ) ? printf(" %i is less then %i \n " , a , b) : ( b < a) ? printf( "%i is less than %i \n " , b , a ):
+24         printf("%i is the same as %i /n " , a , b);
+25 }
+26
+

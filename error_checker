@@ -1,5 +1,8 @@
 Error checker
 
+8th May 25
+You ommited the comma in : printf("%i \n " , a);
+
 7th May 25
 Use single quotes for chars ie char n = 'x';
 
