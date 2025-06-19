@@ -1,0 +1,27 @@
+//  4 Test if user entered the strings YES_OR_NO 456 v1
+10 //with output but no input
+11 #include<stdio.h>
+12 #include<cs50.h>
+13 #include<string.h>
+14 char* my();
+15 int main()
+16 {
+17         printf("%s \n ", my());
+18 }
+19 char* my()
+20 {
+21         char* question=get_string("Answer Yes or No");
+22         if (strcmp(question, "Yes") == 0)
+23         {
+24                 return "You answered Yes";
+25         }
+26         else if (strcmp(question, "No") == 0)
+27         {
+28                 return "You answered No";
+29         }
+30         else
+31         {
+32                 return"You didn'nt answer Yes or No!";
+33         }
+34         return 0;
+35 }

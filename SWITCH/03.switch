@@ -1,0 +1,28 @@
+ // 3 use SWTICH to categorise the user's number into small,medium or large 3456 v1
+10 //switch, case break, default
+11 #include<stdio.h>
+12 #include<cs50.h>
+13 void my(int a);
+14 int main()
+15 {
+16         int b = get_int("Pick a number");
+17         my(b);
+18 }
+19
+20 void my(int a)
+21 {
+22         switch(a)
+23         {
+24                 case 1:
+25                 case 2:
+26                 case 3:
+27                 printf("%i is a low  number \n" , a);
+28         break;
+29                 case 4:
+30                 case 5:
+31                 case 6:
+32                 printf("%i is higher than 3 but lower than 7 \n " , a);
+33         break;
+34         default: printf("%i is larger than 6 \n " , a);
+35         }
+

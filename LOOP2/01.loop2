@@ -35,3 +35,28 @@ int main()
 
 
 //c
+
+//1c Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1
+10 //DO BELOW USING A DO WHIILE LOOP IF YOU CAN
+11 #include<stdio.h>
+12 #include<cs50.h>
+13
+14 int main()
+15 {
+16 int a =0 ;
+17         do
+18         {
+19                 int b = 0;
+20                 do{
+21                         printf("#");
+22                         b++;
+23                 }
+24                 while ( b < 4);
+25
+26         printf("\n");
+27         a++;
+28         }
+29         while (a < 4);
+30
+31 }
+
