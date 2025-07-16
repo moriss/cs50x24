@@ -1,0 +1,33 @@
+ 
+
+
+
+
+
+
+
+
+//YOU DID DO WHILE BY MISTAKE. YOU STILL NEED TO DO A FOR LOOP AND B WHILE LOOP
+
+// 3c Create COUNT_UP TO count from 0 to n 3a 456 v1
+10 //with input but no output and a do while loop
+11 #include<cs50.h>
+12 #include<stdio.h>
+13 void my(int a);
+14 int main()
+15 {
+16         int n = get_int("Enter a number");
+17         my(n);
+18 }
+19
+20 void my(int a)
+21 {
+22         int count= 0;
+23         do
+24         {
+25                 printf("%i \n ",count);
+26                 count ++;
+27         }
+28         while(count < a);
+29 }
+

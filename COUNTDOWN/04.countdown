@@ -1,0 +1,19 @@
+//  4A COUNTDOWN from n to 0 456  v1
+10 //With output but no intput
+11 #include<cs50.h>
+12 #include<stdio.h>
+13 int my();
+14 int main()
+15 {
+16         my();
+17 }
+18 int my()
+19 {
+20         for (int i = 10; i > 0; i--)
+21         {
+22                 printf("%i \n " , i);
+23         }
+24 return 0;
+25 }
+26
+

@@ -1,0 +1,31 @@
+ //2 Calculate users WAGE  including time and a half for hours over 40 23456 v1
+10 #include<stdio.h>
+11 #include<string.h>
+12 #include<cs50.h>
+13 void my();
+14
+15 int main()
+16 {
+17         my();
+18 }
+19
+20 void my()
+21 {
+22         int hourly_rate = 10;
+23         int hours = 50;
+24         int wage = 0;
+25         int extra = 0;
+26         if (hours > 40)
+27         {
+28         extra = hours - 40;
+29         wage = (hourly_rate * hours) + (extra * hourly_rate * 0.5);
+30         printf("%i \n " , wage);
+31         }
+32         else
+33         {
+34         wage = hourly_rate * hours;
+35         printf("%i \n ",wage);
+36         }
+37 }
+38
+
