@@ -1,13 +1,49 @@
- 
+ // 3a Create COUNT_UP TO count from 0 to n 3a 456 v1
+10 //For loop, with input but no output
+11 #include<stdio.h>
+12 #include<cs50.h>
+13 void my(int count);
+14
+15 int main()
+16 {
+17         int roll = get_int("Pick a number");
+18         my(roll);
+19 }
+20 void my(int count)
+21 {
+22         for (int i = 0; i < count; i++)
+23         {
+24                 printf("%i \n " , i);
+25         }
+26 }
+27
+
+
+
+// 3b Create COUNT_UP TO count from 0 to n 3b 456 v1
+10 //while loop, with input but no output
+11 #include<stdio.h>
+12 #include<cs50.h>
+13 void my(int polp);
+14 int main()
+15 {
+16         int change = get_int("Pick a number");
+17         my(change);
+18 }
+19 void my(int polp)
+20 {
+21         int target=0;
+22         while(target < polp)
+23         {
+24                 printf("%i \n" , target);
+25                 target ++;
+26         }
+27 }
 
 
 
 
 
-
-
-
-//YOU DID DO WHILE BY MISTAKE. YOU STILL NEED TO DO A FOR LOOP AND B WHILE LOOP
 
 // 3c Create COUNT_UP TO count from 0 to n 3a 456 v1
 10 //with input but no output and a do while loop

@@ -11,9 +11,9 @@
 
 // 6  Creat an ADD function 6 v1
 //  4B COUNTDOWN from n to 0 456  v1
+// 4a Create COUNT_UP TO count from 0 to n 456 v1 
+//  6 Test if user entered Y_OR_N 6 v1
 
-// 3a Create COUNT_UP TO count from 0 to n 3a 456 v1 
-//  3 Test if user entered Y_OR_N 3456 v1
 // 1  COMPARE two numbers. Test which is greater.123456 v2
 // 3 Do a TERNARY if else comparing two chars 3456 v1
 // 4 Asks someone's name and GREET them. 45 v1

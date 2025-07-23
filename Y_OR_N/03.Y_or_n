@@ -1,0 +1,27 @@
+//  3 Test if user entered Y_OR_N 3456 v1
+10 //input but no output
+11 #include<stdio.h>
+12 #include<cs50.h>
+13 int my();
+14 int main()
+15 {
+16         if (my() == true)
+17         {
+18                 printf("You said yes");
+19         }
+20         else (printf("You said No"));
+21 }
+22 int my()
+23 {
+24         char answer=get_char("answer Y or N for Yes or No");
+25         if (answer == 'Y')
+26                 {
+27                         return 1;
+28                 }
+29         else
+30                 {
+31                         return 0;
+32                 }
+33 }
+34
+
