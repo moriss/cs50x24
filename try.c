@@ -6,7 +6,22 @@
 
 
 //Type your code here
-
+//COMPARE V2 TRANSITION
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+	int a = 5;
+	int b = 6;
+	if(a > 5)
+	{
+		printf("%i as is greater than %i \n ", a , b);
+	}
+	else
+	{
+		printf("%i as is less than %i \n ", a , b);
+	}
+}
 
 
 // 6  Creat an ADD function 6 v1
