@@ -1,0 +1,43 @@
+// 1  COMPARE two numbers. Test which is greater.123456 v1
+10 #include<stdio.h>
+11 #include<cs50.h>
+12 int main()
+13 {
+14         int a = 5;
+15         int b = 5;
+16         if(a > b)
+17         {
+18                 printf("%i is greater than %i \n ", a,b);
+19         }
+20         else if (b > a)
+21         {
+22                 printf("%i is greater than %i \n" , b,a);
+23         }
+24         else
+25         {
+26                 printf(" %i and %i are both the same \n " , a,b);
+27         }
+28 }
+ 
+
+
+
+
+
+
+
+#include<stdio.h>
+11 #include<cs50.h>
+12 int main()
+13 {
+14         int a = 5;
+15         int b = 6;
+16         if(a > b)
+17                 {
+18                         printf("%i is greater than %i \n " , a,b);
+19                 }
+20         else
+21         {
+22                 printf("%i is greater than %i \n " , b,a);
+23         }
+24 }

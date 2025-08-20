@@ -1,0 +1,49 @@
+ou're building a solid foundation with those examples—nicely structured and escalating in difficulty. To round out Level 1 before starting Level 2, you might benefit from exercises that add practical use of loops, logic, and user input/output, but still stay within your current zone of confidence. Here are some well-scoped suggestions to fill out your V1 series:
+
+42 // 5 Create a FACTORIAL calculator. 456 V1
+Prompt the user for a number and return the factorial using a loop. Helps reinforce iteration, input, and return value handling.
+
+43 // 4 Test if a number is PRIME or not. 456 V1
+Use a loop to test divisibility up to √n. Adds logic and useful math.
+
+44 // 5 Use MODULUS to check if number is EVEN or ODD. 456 V1
+This is a classic one-liner that helps reinforce understanding of %.
+
+45 // 6 Create a function to REVERSE a string. 456 V1
+Great for building comfort with arrays, pointers (optionally), and loops.
+
+46 // 6 Build a basic PASSWORD CHECKER that checks length and a symbol. 456 V1
+Teaches conditionals, string manipulation, and basic validation.
+
+47 // 5 Sum the DIGITS of a number. 456 V1
+Input an integer, break it into digits, and add them. Focus on division and loops.
+
+48 // 3 Create a basic LOGIN function. 3456 V1
+Prompt for username and password, check against fixed values.
+
+49 // 4 Create a simple CALCULATOR using switch. 456 V1
+Use user input and switch to perform +, –, *, or /.
+
+50 // 4 Use scanf to read a line of TEXT into an array. 45 V1
+Helpful if you move beyond get_string() or are practicing lower-level I/O.
+
+Each of these:
+
+Fits into your numbered level system.
+
+Has real-world use.
+
+Reinforces core concepts before abstraction or library-heavy work begins.
+
+Let me know if you'd like help drafting any of them!
+
+
+
+
+
+
+
+
+
+Ask ChatGPT
+
