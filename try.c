@@ -6,23 +6,16 @@
 
 
 //Type your code here
-// 1 Asks someone's name and GREET them.12345 v1
-#include<stdio.h>
-#include<cs50.h>
-int main()
-{
-	string name = get_string("What is your name?");
-	printf("Hello %s \n" , name);
-}
+
+
 
 // 6  Creat an ADD function 6 v1
 //  4B COUNTDOWN from n to 0 456  v1
 // 4a Create COUNT_UP TO count from 0 to n 456 v1 
 //  6 Test if user entered Y_OR_N 6 v1
 // 2  COMPARE two numbers. Test which is greater. 23456 v1
+// 3 Asks someone's name and GREET them. 345 v1
 
-
-// 4 Asks someone's name and GREET them. 45 v1
 //  5v1 Test if user entered the strings YES_OR_NO 56 v1  
 // 4a Create CHAR_COUNTING to print n numbers of a char in a row.456 V1 
 // 2a Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1

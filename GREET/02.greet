@@ -1,7 +1,19 @@
 // 2 Asks someone's name and GREET them. 2345
-#include<stdio.h>
-#include<cs50.h>
-#include<string.h>
+11 #include<stdio.h>
+12 #include<cs50.h>
+13 void my();
+14 int main()
+15 {
+16         my();
+17 }
+18 void my()
+19 {
+20         string g = get_string("What is your name?" );
+21         printf("Hello %s \n", g);
+22 }
+23
+
+
 void vlas();
 int main()
 {
@@ -15,7 +27,7 @@ void vlas()
 
 
 
-// 2 Asks someone's name and GREET them. 2345 v1
+
 10 #include<stdio.h>
 11 #include<cs50.h>
 12 void my();
