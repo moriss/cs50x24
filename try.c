@@ -8,15 +8,14 @@
 //Type your code here
 
 
-
 // 6  Creat an ADD function 6 v1
 //  4B COUNTDOWN from n to 0 456  v1
 // 4a Create COUNT_UP TO count from 0 to n 456 v1 
 //  6 Test if user entered Y_OR_N 6 v1
 // 2  COMPARE two numbers. Test which is greater. 23456 v1
 // 3 Asks someone's name and GREET them. 345 v1
+//  2 Test if user entered the strings YES_OR_NO 23456 v1  
 
-//  5v1 Test if user entered the strings YES_OR_NO 56 v1  
 // 4a Create CHAR_COUNTING to print n numbers of a char in a row.456 V1 
 // 2a Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1
 // 4 use SWTICH to categorise the user's number into small,medium or large 456 v1

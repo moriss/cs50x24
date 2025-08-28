@@ -1,6 +1,28 @@
 #include<stdio.h>
 #include<cs50.h>
 #include<string.h>
+
+
+#include<stdio.h>
+11 #include<cs50.h>
+12 #include<string.h>
+13 int main()
+14 {
+15 string answer=get_string("Did you answer yes or no?");
+16 if (strcmp(answer , "No")== 0)
+17 {
+18 printf("You answered No \n ");
+19 }
+20 else
+21 {
+22 printf("You answered Yes \n ");
+23 }
+24 }
+25
+
+
+
+
 int main()
 {
         char*approval=get_string("Please enter yes or no");
