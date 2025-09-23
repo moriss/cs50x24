@@ -6,7 +6,29 @@
 
 
 //Type your code here
+// 4a Create CHAR_COUNTING to print n numbers of a char in a row.456 V1 
+//With output but no input
 
+#include<stdio.h>
+#include<string.h>
+#include<cs50.h>
+int my();
+int main()
+{
+	int result = my();
+	printf("%i \n" , result);
+}
+
+int my()
+{
+	int sum=0;
+	for (int i = 0; i < 5; i++)
+	{
+
+		sum = i;
+	}
+	return sum;
+}
 
 // 6  Creat an ADD function 6 v1
 //  4B COUNTDOWN from n to 0 456  v1
