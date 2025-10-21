@@ -6,29 +6,7 @@
 
 
 //Type your code here
-// 4a Create CHAR_COUNTING to print n numbers of a char in a row.456 V1 
-//With output but no input
 
-#include<stdio.h>
-#include<string.h>
-#include<cs50.h>
-int my();
-int main()
-{
-	int result = my();
-	printf("%i \n" , result);
-}
-
-int my()
-{
-	int sum=0;
-	for (int i = 0; i < 5; i++)
-	{
-
-		sum = i;
-	}
-	return sum;
-}
 
 // 6  Creat an ADD function 6 v1
 //  4B COUNTDOWN from n to 0 456  v1
@@ -37,11 +15,11 @@ int my()
 // 2  COMPARE two numbers. Test which is greater. 23456 v1
 // 3 Asks someone's name and GREET them. 345 v1
 //  2 Test if user entered the strings YES_OR_NO 23456 v1  
+// 4b Create CHAR_COUNTING to print n numbers of a char in a row.456 V1 
+// 2b Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1
+// 5 use SWTICH to categorise the user's number into small,medium or large 56 v1
+// 3B Create COUNT_UP TO count from 0 to n 3456 BC v1
 
-// 4a Create CHAR_COUNTING to print n numbers of a char in a row.456 V1 
-// 2a Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1
-// 4 use SWTICH to categorise the user's number into small,medium or large 456 v1
-// 3A Create COUNT_UP TO count from 0 to n 3456 BC v1
 //3 Calculate users WAGE  including time and a half for hours over 40 3456 v1
 
 //NEXT LEVELS AND BEYOND!

@@ -1,0 +1,23 @@
+// 2a Build a LOOP2 that builds a wall of hashes 4 wide + 4 high 23456 V1
+10 #include<stdio.h>
+11 #include<cs50.h>
+12 #include<string.h>
+13
+14 void my();
+15 int main()
+16 {
+17         my();
+18 }
+19
+20 void my()
+21 {
+22         for (int i = 0; i < 4; i++)
+23         {
+24                 for (int j=0; j < 4; j++)
+25                 {
+26                         printf("#");
+27                 }
+28         printf("\n");
+29         }
+30 }
+
