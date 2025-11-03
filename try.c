@@ -6,7 +6,34 @@
 
 
 //Type your code here
+//3 Calculate users WAGE  including time and a half for hours over 40 3456 v1
+//A function With input but no output
+//TO BE SOLVED
 
+#include<stdio.h>
+#include<cs50.h>
+#include<string.h>
+void my(int h, int r);
+int main()
+{
+	int hours=get_int("How many hours do you work?");
+	int rate = get_int("What is your hourly rate?");
+	my(hours, rate);
+}
+
+void my(int h, int r)
+{
+	if (h > 40)
+	{
+		int overtime = h - 40;
+		int pay = (h * r) + (overtime * r * 0.5);//overtime is time and a half.
+	}
+	else
+	{
+		int pay = (h * r);
+	}
+	printf("%i \n " , pay);
+}
 
 // 6  Creat an ADD function 6 v1
 //  4B COUNTDOWN from n to 0 456  v1
